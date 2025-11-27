@@ -1,0 +1,27 @@
+erDiagram
+
+    Quartier {
+        string nom
+        int id_quartier
+        }
+    Bar{
+        string adresse
+        string nom
+        int id_bar
+        int id_quartier
+    }
+    Bière{
+        string nom
+        string type
+        string degrés
+        string catégorie
+        int id_biere
+    }
+    Prix{
+        string prix
+        int id_bar
+        int id_biere
+    }
+    Quartier ||--|| Bar: "1..1 possède"
+    Bière ||--||Bar:"1..N contient"
+    Prix ||--||Bière:"1..N contient"
