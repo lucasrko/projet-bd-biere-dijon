@@ -1,0 +1,269 @@
+--
+-- PostgreSQL database dump
+--
+
+\restrict KvfCZyoenI1WZbPHUy1MZ8xN6gysYuwv69tvMr2FgEhTbdb2hHKUtoXlK97a7hF
+
+-- Dumped from database version 15.15 (Debian 15.15-1.pgdg13+1)
+-- Dumped by pg_dump version 18.0
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Data for Name: quartier; Type: TABLE DATA; Schema: beerproject; Owner: codaSchoolUser
+--
+
+INSERT INTO beerproject.quartier VALUES (1, 'Centre Ville');
+INSERT INTO beerproject.quartier VALUES (2, 'Bellevue');
+INSERT INTO beerproject.quartier VALUES (3, 'Les Jardins');
+INSERT INTO beerproject.quartier VALUES (4, 'Riverside');
+INSERT INTO beerproject.quartier VALUES (5, 'Vieux Port');
+INSERT INTO beerproject.quartier VALUES (6, 'Montclair');
+INSERT INTO beerproject.quartier VALUES (7, 'Les Collines');
+INSERT INTO beerproject.quartier VALUES (8, 'Beaulieu');
+INSERT INTO beerproject.quartier VALUES (9, 'Grand Parc');
+INSERT INTO beerproject.quartier VALUES (10, 'Val Fleuri');
+
+
+--
+-- Data for Name: bar; Type: TABLE DATA; Schema: beerproject; Owner: codaSchoolUser
+--
+
+INSERT INTO beerproject.bar VALUES (1, 'Le Bar du Coin', '12 Rue des Lilas', 7);
+INSERT INTO beerproject.bar VALUES (2, 'Chez Marcel', '45 Avenue de la Gare', 2);
+INSERT INTO beerproject.bar VALUES (3, 'La Taverne des Amis', '8 Rue de la Fontaine', 1);
+INSERT INTO beerproject.bar VALUES (4, 'Le Pub Royal', '22 Boulevard Victor Hugo', 5);
+INSERT INTO beerproject.bar VALUES (5, 'La Cave a Mousse', '78 Rue Centrale', 2);
+INSERT INTO beerproject.bar VALUES (6, 'Le Comptoir Bleu', '14 Rue du Port', 3);
+INSERT INTO beerproject.bar VALUES (7, 'La Pause Biere', '32 Rue Nationale', 5);
+INSERT INTO beerproject.bar VALUES (8, 'Le Sunset Bar', '27 Avenue du Lac', 3);
+INSERT INTO beerproject.bar VALUES (9, 'Le Refuge Urbain', '47 Rue du Pont', 3);
+INSERT INTO beerproject.bar VALUES (10, 'Le Cactus Bar', '29 Rue de Provence', 1);
+INSERT INTO beerproject.bar VALUES (11, 'Le Break', '90 Rue Jean Jaures', 8);
+INSERT INTO beerproject.bar VALUES (12, 'Le Grizzly Bar', '18 Rue des Alpes', 1);
+INSERT INTO beerproject.bar VALUES (13, 'Le Velvet Pub', '34 Rue Royale', 6);
+INSERT INTO beerproject.bar VALUES (14, 'La Station', '51 Avenue du Midi', 7);
+INSERT INTO beerproject.bar VALUES (15, 'Le Jungle Pub', '58 Rue des Jardins', 7);
+INSERT INTO beerproject.bar VALUES (16, 'Le Loft Bar', '16 Rue du Marchand', 10);
+INSERT INTO beerproject.bar VALUES (17, 'La Bulle', '21 Rue des Peupliers', 10);
+INSERT INTO beerproject.bar VALUES (18, 'Le Crocodile', '7 Rue du Moulin', 3);
+INSERT INTO beerproject.bar VALUES (19, 'Le Quai Libre', '40 Quai du Centre', 8);
+INSERT INTO beerproject.bar VALUES (20, 'Le Lantern Bar', '11 Rue des Oeillets', 3);
+
+
+--
+-- Data for Name: biere; Type: TABLE DATA; Schema: beerproject; Owner: codaSchoolUser
+--
+
+INSERT INTO beerproject.biere VALUES (1, 'Golden Brew', 'Lager', 4.50, 'Blonde');
+INSERT INTO beerproject.biere VALUES (2, 'Night Stout', 'Stout', 6.20, 'Brune');
+INSERT INTO beerproject.biere VALUES (3, 'Sunrise Ale', 'Ale', 5.00, 'Ambree');
+INSERT INTO beerproject.biere VALUES (4, 'Frosty Wheat', 'Wheat Beer', 4.20, 'Blanche');
+INSERT INTO beerproject.biere VALUES (5, 'Wild Hop IPA', 'IPA', 6.80, 'IPA');
+INSERT INTO beerproject.biere VALUES (6, 'Ruby Porter', 'Porter', 5.60, 'Brune');
+INSERT INTO beerproject.biere VALUES (7, 'Crystal Lager', 'Lager', 4.70, 'Blonde');
+INSERT INTO beerproject.biere VALUES (8, 'Moonlight Ale', 'Ale', 5.10, 'Ambree');
+INSERT INTO beerproject.biere VALUES (9, 'Dark Canyon', 'Stout', 7.20, 'Brune');
+INSERT INTO beerproject.biere VALUES (10, 'Citrus Punch IPA', 'IPA', 6.40, 'IPA');
+INSERT INTO beerproject.biere VALUES (11, 'Snowflake White', 'Wheat Beer', 4.00, 'Blanche');
+INSERT INTO beerproject.biere VALUES (12, 'Red Mountain Ale', 'Ale', 5.40, 'Ambree');
+INSERT INTO beerproject.biere VALUES (13, 'Brooklyn Lager', 'Lager', 4.80, 'Blonde');
+INSERT INTO beerproject.biere VALUES (14, 'Iron Bear Stout', 'Stout', 6.90, 'Brune');
+INSERT INTO beerproject.biere VALUES (15, 'Tropical IPA', 'IPA', 7.00, 'IPA');
+INSERT INTO beerproject.biere VALUES (16, 'Velvet Porter', 'Porter', 5.80, 'Brune');
+INSERT INTO beerproject.biere VALUES (17, 'Sunny Wheat', 'Wheat Beer', 4.30, 'Blanche');
+INSERT INTO beerproject.biere VALUES (18, 'Amber Rise', 'Ale', 5.30, 'Ambree');
+INSERT INTO beerproject.biere VALUES (19, 'Hop Crusher IPA', 'IPA', 6.70, 'IPA');
+INSERT INTO beerproject.biere VALUES (20, 'Black Hammer', 'Stout', 7.50, 'Brune');
+INSERT INTO beerproject.biere VALUES (21, 'Pure Gold Lager', 'Lager', 4.90, 'Blonde');
+INSERT INTO beerproject.biere VALUES (22, 'Forest Ale', 'Ale', 5.20, 'Ambree');
+INSERT INTO beerproject.biere VALUES (23, 'River Wheat', 'Wheat Beer', 4.10, 'Blanche');
+INSERT INTO beerproject.biere VALUES (24, 'Thunder IPA', 'IPA', 6.90, 'IPA');
+INSERT INTO beerproject.biere VALUES (25, 'Shadow Porter', 'Porter', 6.10, 'Brune');
+INSERT INTO beerproject.biere VALUES (26, 'North Lager', 'Lager', 4.60, 'Blonde');
+INSERT INTO beerproject.biere VALUES (27, 'Autumn Ale', 'Ale', 5.00, 'Ambree');
+INSERT INTO beerproject.biere VALUES (28, 'White Cloud Wheat', 'Wheat Beer', 4.40, 'Blanche');
+INSERT INTO beerproject.biere VALUES (29, 'Galaxy IPA', 'IPA', 7.30, 'IPA');
+INSERT INTO beerproject.biere VALUES (30, 'Storm Stout', 'Stout', 7.80, 'Brune');
+INSERT INTO beerproject.biere VALUES (31, 'Amber Oak', 'Ale', 5.40, 'Ambree');
+INSERT INTO beerproject.biere VALUES (32, 'Smooth Lager', 'Lager', 4.50, 'Blonde');
+INSERT INTO beerproject.biere VALUES (33, 'Cherry Porter', 'Porter', 6.00, 'Brune');
+INSERT INTO beerproject.biere VALUES (34, 'Frost Wheat', 'Wheat Beer', 4.20, 'Blanche');
+INSERT INTO beerproject.biere VALUES (35, 'Infinity IPA', 'IPA', 7.10, 'IPA');
+INSERT INTO beerproject.biere VALUES (36, 'Deep Dark Stout', 'Stout', 8.00, 'Brune');
+INSERT INTO beerproject.biere VALUES (37, 'Canyon Ale', 'Ale', 5.10, 'Ambree');
+INSERT INTO beerproject.biere VALUES (38, 'Blue River Lager', 'Lager', 4.70, 'Blonde');
+INSERT INTO beerproject.biere VALUES (39, 'Solar Wheat', 'Wheat Beer', 4.30, 'Blanche');
+INSERT INTO beerproject.biere VALUES (40, 'Golden Falcon', 'IPA', 6.50, 'Premium');
+
+
+--
+-- Data for Name: prix; Type: TABLE DATA; Schema: beerproject; Owner: codaSchoolUser
+--
+
+INSERT INTO beerproject.prix VALUES (121, 5.20, 1, 3);
+INSERT INTO beerproject.prix VALUES (122, 7.40, 2, 12);
+INSERT INTO beerproject.prix VALUES (123, 4.80, 3, 7);
+INSERT INTO beerproject.prix VALUES (124, 6.90, 4, 15);
+INSERT INTO beerproject.prix VALUES (125, 8.50, 5, 21);
+INSERT INTO beerproject.prix VALUES (126, 5.60, 6, 9);
+INSERT INTO beerproject.prix VALUES (127, 7.10, 7, 18);
+INSERT INTO beerproject.prix VALUES (128, 4.30, 8, 2);
+INSERT INTO beerproject.prix VALUES (129, 9.20, 9, 27);
+INSERT INTO beerproject.prix VALUES (130, 6.40, 10, 14);
+INSERT INTO beerproject.prix VALUES (131, 5.10, 11, 1);
+INSERT INTO beerproject.prix VALUES (132, 7.80, 12, 32);
+INSERT INTO beerproject.prix VALUES (133, 4.60, 13, 6);
+INSERT INTO beerproject.prix VALUES (134, 8.90, 14, 25);
+INSERT INTO beerproject.prix VALUES (135, 6.70, 15, 19);
+INSERT INTO beerproject.prix VALUES (136, 5.30, 16, 4);
+INSERT INTO beerproject.prix VALUES (137, 7.90, 17, 33);
+INSERT INTO beerproject.prix VALUES (138, 4.50, 18, 10);
+INSERT INTO beerproject.prix VALUES (139, 9.00, 19, 30);
+INSERT INTO beerproject.prix VALUES (140, 6.10, 20, 8);
+INSERT INTO beerproject.prix VALUES (141, 5.40, 1, 11);
+INSERT INTO beerproject.prix VALUES (142, 7.30, 2, 28);
+INSERT INTO beerproject.prix VALUES (143, 4.90, 3, 16);
+INSERT INTO beerproject.prix VALUES (144, 6.20, 4, 5);
+INSERT INTO beerproject.prix VALUES (145, 8.10, 5, 23);
+INSERT INTO beerproject.prix VALUES (146, 5.80, 6, 13);
+INSERT INTO beerproject.prix VALUES (147, 7.50, 7, 31);
+INSERT INTO beerproject.prix VALUES (148, 4.70, 8, 20);
+INSERT INTO beerproject.prix VALUES (149, 9.30, 9, 36);
+INSERT INTO beerproject.prix VALUES (150, 6.60, 10, 29);
+INSERT INTO beerproject.prix VALUES (151, 5.90, 11, 7);
+INSERT INTO beerproject.prix VALUES (152, 7.20, 12, 35);
+INSERT INTO beerproject.prix VALUES (153, 4.40, 13, 3);
+INSERT INTO beerproject.prix VALUES (154, 8.30, 14, 34);
+INSERT INTO beerproject.prix VALUES (155, 6.50, 15, 18);
+INSERT INTO beerproject.prix VALUES (156, 5.70, 16, 12);
+INSERT INTO beerproject.prix VALUES (157, 7.60, 17, 39);
+INSERT INTO beerproject.prix VALUES (158, 4.20, 18, 15);
+INSERT INTO beerproject.prix VALUES (159, 9.40, 19, 37);
+INSERT INTO beerproject.prix VALUES (160, 6.80, 20, 26);
+INSERT INTO beerproject.prix VALUES (161, 5.30, 1, 14);
+INSERT INTO beerproject.prix VALUES (162, 7.10, 2, 24);
+INSERT INTO beerproject.prix VALUES (163, 4.60, 3, 8);
+INSERT INTO beerproject.prix VALUES (164, 6.50, 4, 18);
+INSERT INTO beerproject.prix VALUES (165, 8.40, 5, 38);
+INSERT INTO beerproject.prix VALUES (166, 5.90, 6, 21);
+INSERT INTO beerproject.prix VALUES (167, 7.70, 7, 11);
+INSERT INTO beerproject.prix VALUES (168, 4.30, 8, 19);
+INSERT INTO beerproject.prix VALUES (169, 9.10, 9, 33);
+INSERT INTO beerproject.prix VALUES (170, 6.30, 10, 40);
+INSERT INTO beerproject.prix VALUES (171, 5.40, 11, 17);
+INSERT INTO beerproject.prix VALUES (172, 7.90, 12, 22);
+INSERT INTO beerproject.prix VALUES (173, 4.80, 13, 9);
+INSERT INTO beerproject.prix VALUES (174, 8.20, 14, 6);
+INSERT INTO beerproject.prix VALUES (175, 6.60, 15, 3);
+INSERT INTO beerproject.prix VALUES (176, 5.10, 16, 24);
+INSERT INTO beerproject.prix VALUES (177, 7.30, 17, 10);
+INSERT INTO beerproject.prix VALUES (178, 4.90, 18, 13);
+INSERT INTO beerproject.prix VALUES (179, 9.20, 19, 31);
+INSERT INTO beerproject.prix VALUES (180, 6.70, 20, 1);
+INSERT INTO beerproject.prix VALUES (181, 5.50, 1, 29);
+INSERT INTO beerproject.prix VALUES (182, 7.80, 2, 2);
+INSERT INTO beerproject.prix VALUES (183, 4.20, 3, 25);
+INSERT INTO beerproject.prix VALUES (184, 6.10, 4, 35);
+INSERT INTO beerproject.prix VALUES (185, 8.70, 5, 5);
+INSERT INTO beerproject.prix VALUES (186, 5.60, 6, 30);
+INSERT INTO beerproject.prix VALUES (187, 7.40, 7, 14);
+INSERT INTO beerproject.prix VALUES (188, 4.80, 8, 22);
+INSERT INTO beerproject.prix VALUES (189, 9.30, 9, 16);
+INSERT INTO beerproject.prix VALUES (190, 6.50, 10, 7);
+INSERT INTO beerproject.prix VALUES (191, 5.90, 11, 39);
+INSERT INTO beerproject.prix VALUES (192, 7.10, 12, 4);
+INSERT INTO beerproject.prix VALUES (193, 4.70, 13, 37);
+INSERT INTO beerproject.prix VALUES (194, 8.60, 14, 11);
+INSERT INTO beerproject.prix VALUES (195, 6.40, 15, 27);
+INSERT INTO beerproject.prix VALUES (196, 5.20, 16, 26);
+INSERT INTO beerproject.prix VALUES (197, 7.60, 17, 32);
+INSERT INTO beerproject.prix VALUES (198, 4.90, 18, 23);
+INSERT INTO beerproject.prix VALUES (199, 9.40, 19, 28);
+INSERT INTO beerproject.prix VALUES (200, 6.80, 20, 17);
+INSERT INTO beerproject.prix VALUES (201, 5.70, 1, 20);
+INSERT INTO beerproject.prix VALUES (202, 7.50, 2, 6);
+INSERT INTO beerproject.prix VALUES (203, 4.30, 3, 14);
+INSERT INTO beerproject.prix VALUES (204, 6.80, 4, 36);
+INSERT INTO beerproject.prix VALUES (205, 8.90, 5, 9);
+INSERT INTO beerproject.prix VALUES (206, 5.40, 6, 8);
+INSERT INTO beerproject.prix VALUES (207, 7.20, 7, 30);
+INSERT INTO beerproject.prix VALUES (208, 4.60, 8, 7);
+INSERT INTO beerproject.prix VALUES (209, 9.10, 9, 2);
+INSERT INTO beerproject.prix VALUES (210, 6.90, 10, 5);
+INSERT INTO beerproject.prix VALUES (211, 5.10, 11, 34);
+INSERT INTO beerproject.prix VALUES (212, 7.40, 12, 1);
+INSERT INTO beerproject.prix VALUES (213, 4.80, 13, 24);
+INSERT INTO beerproject.prix VALUES (214, 8.30, 14, 19);
+INSERT INTO beerproject.prix VALUES (215, 6.20, 15, 40);
+INSERT INTO beerproject.prix VALUES (216, 5.50, 16, 12);
+INSERT INTO beerproject.prix VALUES (217, 7.70, 17, 33);
+INSERT INTO beerproject.prix VALUES (218, 4.40, 18, 10);
+INSERT INTO beerproject.prix VALUES (219, 9.00, 19, 27);
+INSERT INTO beerproject.prix VALUES (220, 6.30, 20, 18);
+INSERT INTO beerproject.prix VALUES (221, 5.80, 1, 38);
+INSERT INTO beerproject.prix VALUES (222, 7.60, 2, 26);
+INSERT INTO beerproject.prix VALUES (223, 4.50, 3, 32);
+INSERT INTO beerproject.prix VALUES (224, 6.20, 4, 9);
+INSERT INTO beerproject.prix VALUES (225, 8.40, 5, 22);
+INSERT INTO beerproject.prix VALUES (226, 5.90, 6, 17);
+INSERT INTO beerproject.prix VALUES (227, 7.30, 7, 24);
+INSERT INTO beerproject.prix VALUES (228, 4.70, 8, 3);
+INSERT INTO beerproject.prix VALUES (229, 9.20, 9, 31);
+INSERT INTO beerproject.prix VALUES (230, 6.40, 10, 15);
+INSERT INTO beerproject.prix VALUES (231, 5.60, 11, 23);
+INSERT INTO beerproject.prix VALUES (232, 7.10, 12, 13);
+INSERT INTO beerproject.prix VALUES (233, 4.90, 13, 8);
+INSERT INTO beerproject.prix VALUES (234, 8.70, 14, 7);
+INSERT INTO beerproject.prix VALUES (235, 6.60, 15, 1);
+INSERT INTO beerproject.prix VALUES (236, 5.30, 16, 25);
+INSERT INTO beerproject.prix VALUES (237, 7.80, 17, 36);
+INSERT INTO beerproject.prix VALUES (238, 4.30, 18, 14);
+INSERT INTO beerproject.prix VALUES (239, 9.30, 19, 30);
+INSERT INTO beerproject.prix VALUES (240, 6.50, 20, 11);
+
+
+--
+-- Name: bar_id_bar_seq; Type: SEQUENCE SET; Schema: beerproject; Owner: codaSchoolUser
+--
+
+SELECT pg_catalog.setval('beerproject.bar_id_bar_seq', 20, true);
+
+
+--
+-- Name: biere_id_biere_seq; Type: SEQUENCE SET; Schema: beerproject; Owner: codaSchoolUser
+--
+
+SELECT pg_catalog.setval('beerproject.biere_id_biere_seq', 40, true);
+
+
+--
+-- Name: prix_id_prix_seq; Type: SEQUENCE SET; Schema: beerproject; Owner: codaSchoolUser
+--
+
+SELECT pg_catalog.setval('beerproject.prix_id_prix_seq', 240, true);
+
+
+--
+-- Name: quartier_id_quartier_seq; Type: SEQUENCE SET; Schema: beerproject; Owner: codaSchoolUser
+--
+
+SELECT pg_catalog.setval('beerproject.quartier_id_quartier_seq', 10, true);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\unrestrict KvfCZyoenI1WZbPHUy1MZ8xN6gysYuwv69tvMr2FgEhTbdb2hHKUtoXlK97a7hF
+

@@ -1,0 +1,299 @@
+--
+-- PostgreSQL database dump
+--
+
+\restrict 22K2O35l0i74U753J7ZgvnoEp4vxJYGSmeDmaHhq1XmS2CSpvm1vdsTt9VydFzy
+
+-- Dumped from database version 15.15 (Debian 15.15-1.pgdg13+1)
+-- Dumped by pg_dump version 18.0
+
+-- Started on 2025-12-01 13:23:29
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 6 (class 2615 OID 16389)
+-- Name: beerproject; Type: SCHEMA; Schema: -; Owner: codaSchoolUser
+--
+
+CREATE SCHEMA beerproject;
+
+
+ALTER SCHEMA beerproject OWNER TO "codaSchoolUser";
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 237 (class 1259 OID 24656)
+-- Name: bar; Type: TABLE; Schema: beerproject; Owner: codaSchoolUser
+--
+
+CREATE TABLE beerproject.bar (
+    id_bar integer NOT NULL,
+    nom character varying(255) NOT NULL,
+    adresse text NOT NULL,
+    id_quartier integer
+);
+
+
+ALTER TABLE beerproject.bar OWNER TO "codaSchoolUser";
+
+--
+-- TOC entry 236 (class 1259 OID 24655)
+-- Name: bar_id_bar_seq; Type: SEQUENCE; Schema: beerproject; Owner: codaSchoolUser
+--
+
+CREATE SEQUENCE beerproject.bar_id_bar_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE beerproject.bar_id_bar_seq OWNER TO "codaSchoolUser";
+
+--
+-- TOC entry 3478 (class 0 OID 0)
+-- Dependencies: 236
+-- Name: bar_id_bar_seq; Type: SEQUENCE OWNED BY; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER SEQUENCE beerproject.bar_id_bar_seq OWNED BY beerproject.bar.id_bar;
+
+
+--
+-- TOC entry 239 (class 1259 OID 24665)
+-- Name: biere; Type: TABLE; Schema: beerproject; Owner: codaSchoolUser
+--
+
+CREATE TABLE beerproject.biere (
+    id_biere integer NOT NULL,
+    nom character varying(255) NOT NULL,
+    type character varying(255) NOT NULL,
+    degres numeric(4,2) NOT NULL,
+    categorie character varying(255) NOT NULL
+);
+
+
+ALTER TABLE beerproject.biere OWNER TO "codaSchoolUser";
+
+--
+-- TOC entry 238 (class 1259 OID 24664)
+-- Name: biere_id_biere_seq; Type: SEQUENCE; Schema: beerproject; Owner: codaSchoolUser
+--
+
+CREATE SEQUENCE beerproject.biere_id_biere_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE beerproject.biere_id_biere_seq OWNER TO "codaSchoolUser";
+
+--
+-- TOC entry 3479 (class 0 OID 0)
+-- Dependencies: 238
+-- Name: biere_id_biere_seq; Type: SEQUENCE OWNED BY; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER SEQUENCE beerproject.biere_id_biere_seq OWNED BY beerproject.biere.id_biere;
+
+
+--
+-- TOC entry 241 (class 1259 OID 24674)
+-- Name: prix; Type: TABLE; Schema: beerproject; Owner: codaSchoolUser
+--
+
+CREATE TABLE beerproject.prix (
+    id_prix integer NOT NULL,
+    prix numeric(5,2) NOT NULL,
+    id_bar integer NOT NULL,
+    id_biere integer NOT NULL
+);
+
+
+ALTER TABLE beerproject.prix OWNER TO "codaSchoolUser";
+
+--
+-- TOC entry 240 (class 1259 OID 24673)
+-- Name: prix_id_prix_seq; Type: SEQUENCE; Schema: beerproject; Owner: codaSchoolUser
+--
+
+CREATE SEQUENCE beerproject.prix_id_prix_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE beerproject.prix_id_prix_seq OWNER TO "codaSchoolUser";
+
+--
+-- TOC entry 3480 (class 0 OID 0)
+-- Dependencies: 240
+-- Name: prix_id_prix_seq; Type: SEQUENCE OWNED BY; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER SEQUENCE beerproject.prix_id_prix_seq OWNED BY beerproject.prix.id_prix;
+
+
+--
+-- TOC entry 235 (class 1259 OID 24649)
+-- Name: quartier; Type: TABLE; Schema: beerproject; Owner: codaSchoolUser
+--
+
+CREATE TABLE beerproject.quartier (
+    id_quartier integer NOT NULL,
+    nom character varying(255) NOT NULL
+);
+
+
+ALTER TABLE beerproject.quartier OWNER TO "codaSchoolUser";
+
+--
+-- TOC entry 234 (class 1259 OID 24648)
+-- Name: quartier_id_quartier_seq; Type: SEQUENCE; Schema: beerproject; Owner: codaSchoolUser
+--
+
+CREATE SEQUENCE beerproject.quartier_id_quartier_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE beerproject.quartier_id_quartier_seq OWNER TO "codaSchoolUser";
+
+--
+-- TOC entry 3481 (class 0 OID 0)
+-- Dependencies: 234
+-- Name: quartier_id_quartier_seq; Type: SEQUENCE OWNED BY; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER SEQUENCE beerproject.quartier_id_quartier_seq OWNED BY beerproject.quartier.id_quartier;
+
+
+--
+-- TOC entry 3317 (class 2604 OID 24659)
+-- Name: bar id_bar; Type: DEFAULT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.bar ALTER COLUMN id_bar SET DEFAULT nextval('beerproject.bar_id_bar_seq'::regclass);
+
+
+--
+-- TOC entry 3318 (class 2604 OID 24668)
+-- Name: biere id_biere; Type: DEFAULT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.biere ALTER COLUMN id_biere SET DEFAULT nextval('beerproject.biere_id_biere_seq'::regclass);
+
+
+--
+-- TOC entry 3319 (class 2604 OID 24677)
+-- Name: prix id_prix; Type: DEFAULT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.prix ALTER COLUMN id_prix SET DEFAULT nextval('beerproject.prix_id_prix_seq'::regclass);
+
+
+--
+-- TOC entry 3316 (class 2604 OID 24652)
+-- Name: quartier id_quartier; Type: DEFAULT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.quartier ALTER COLUMN id_quartier SET DEFAULT nextval('beerproject.quartier_id_quartier_seq'::regclass);
+
+
+--
+-- TOC entry 3323 (class 2606 OID 24663)
+-- Name: bar bar_pkey; Type: CONSTRAINT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.bar
+    ADD CONSTRAINT bar_pkey PRIMARY KEY (id_bar);
+
+
+--
+-- TOC entry 3325 (class 2606 OID 24672)
+-- Name: biere biere_pkey; Type: CONSTRAINT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.biere
+    ADD CONSTRAINT biere_pkey PRIMARY KEY (id_biere);
+
+
+--
+-- TOC entry 3327 (class 2606 OID 24679)
+-- Name: prix prix_pkey; Type: CONSTRAINT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.prix
+    ADD CONSTRAINT prix_pkey PRIMARY KEY (id_prix);
+
+
+--
+-- TOC entry 3321 (class 2606 OID 24654)
+-- Name: quartier quartier_pkey; Type: CONSTRAINT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.quartier
+    ADD CONSTRAINT quartier_pkey PRIMARY KEY (id_quartier);
+
+
+--
+-- TOC entry 3328 (class 2606 OID 24690)
+-- Name: bar bar_id_quartier_fkey; Type: FK CONSTRAINT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.bar
+    ADD CONSTRAINT bar_id_quartier_fkey FOREIGN KEY (id_quartier) REFERENCES beerproject.quartier(id_quartier);
+
+
+--
+-- TOC entry 3329 (class 2606 OID 24680)
+-- Name: prix prix_id_bar_fkey; Type: FK CONSTRAINT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.prix
+    ADD CONSTRAINT prix_id_bar_fkey FOREIGN KEY (id_bar) REFERENCES beerproject.bar(id_bar) ON DELETE CASCADE;
+
+
+--
+-- TOC entry 3330 (class 2606 OID 24685)
+-- Name: prix prix_id_biere_fkey; Type: FK CONSTRAINT; Schema: beerproject; Owner: codaSchoolUser
+--
+
+ALTER TABLE ONLY beerproject.prix
+    ADD CONSTRAINT prix_id_biere_fkey FOREIGN KEY (id_biere) REFERENCES beerproject.biere(id_biere) ON DELETE CASCADE;
+
+
+-- Completed on 2025-12-01 13:23:29
+
+--
+-- PostgreSQL database dump complete
+--
+
+\unrestrict 22K2O35l0i74U753J7ZgvnoEp4vxJYGSmeDmaHhq1XmS2CSpvm1vdsTt9VydFzy
+
