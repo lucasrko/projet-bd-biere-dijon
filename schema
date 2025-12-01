@@ -1,14 +1,3 @@
---
--- PostgreSQL database dump
---
-
-\restrict 22K2O35l0i74U753J7ZgvnoEp4vxJYGSmeDmaHhq1XmS2CSpvm1vdsTt9VydFzy
-
--- Dumped from database version 15.15 (Debian 15.15-1.pgdg13+1)
--- Dumped by pg_dump version 18.0
-
--- Started on 2025-12-01 13:23:29
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
